@@ -16,8 +16,9 @@ namespace Ilmateade_
         public int Surve { get; set; }
         public int Niiskus { get; set; }
         public string tuule_suund { get; set; }
-        public string tuulekiirus { get; set; }
+        //public string tuulekiirus { get; set; }
+        public int zapomnit { get; set; }
 
-       
+
     }
 }

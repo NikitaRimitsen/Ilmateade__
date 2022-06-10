@@ -13,10 +13,12 @@
         <Entry Text="{Binding Surve}" />
         <Label Text="Niiskus" />
         <Entry Text="{Binding Niiskus}" />
-        <Label Text="tuule_suun" />
-        <Entry Text="{Binding tuule_suund}" />
+        <!--<Label Text="tuulekiirus" />
+        <Entry Text="{Binding tuulekiirus}" />-->
         <Label Text="tuulekiirus" />
         <Entry Text="{Binding tuulekiirus}" />
+        <Label Text="Zapomnit" />
+        <Entry Text="{Binding zapomnit}" />
         <StackLayout Orientation="Horizontal">
             <Button Text="Salvestama" Clicked="Button_Clicked" />
             <Button Text="Eemaldama" Clicked="Button_Clicked_1" />
