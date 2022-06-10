@@ -12,11 +12,14 @@ namespace Ilmateade_
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Glavnaja : ContentPage
     {
-        public ListView ListView;
         public Glavnaja()
         {
-            ListView = new ListView();
+            /*ListView = new ListView();
             ListView.ItemsSource = App.Database.GetItems();
+            ListView.ItemTemplate{
+
+            }
+            base.OnAppearing();
             Label text = new Label
             {
                 Text = "Ilmateade",
@@ -26,7 +29,13 @@ namespace Ilmateade_
                 TextColor = Color.White
             };
             this.Content = new StackLayout { Children = { text,ListView } };
-            this.BackgroundColor = Color.SteelBlue;//LightSteelBlue -- можно исопользовать для светлого оформления
+            this.BackgroundColor = Color.SteelBlue;//LightSteelBlue -- можно исопользовать для светлого оформления*/
+            InitializeComponent();
+        }
+        protected override void OnAppearing()
+        {
+            ListView.ItemsSource = App.Database.GetItems();
+            base.OnAppearing();
         }
     }
 }

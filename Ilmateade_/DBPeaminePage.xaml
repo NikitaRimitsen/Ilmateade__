@@ -14,13 +14,13 @@
         <Label Text="Niiskus" />
         <Entry Text="{Binding Niiskus}" />
         <Label Text="tuule_suun" />
-        <Entry Text="{Binding tuule_suun}" />
+        <Entry Text="{Binding tuule_suund}" />
         <Label Text="tuulekiirus" />
         <Entry Text="{Binding tuulekiirus}" />
         <StackLayout Orientation="Horizontal">
-            <Button Text="Сохранить" Clicked="Button_Clicked" />
-            <Button Text="Удалить" Clicked="Button_Clicked_1" />
-            <Button Text="Сохранить" Clicked="Button_Clicked_2" />
+            <Button Text="Salvestama" Clicked="Button_Clicked" />
+            <Button Text="Eemaldama" Clicked="Button_Clicked_1" />
+            <Button Text="Tühistama" Clicked="Button_Clicked_2" />
         </StackLayout>
     </StackLayout>
 </ContentPage>

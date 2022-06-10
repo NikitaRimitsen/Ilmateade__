@@ -26,7 +26,7 @@ namespace Ilmateade_
         {
             InitializeComponent();
 
-            MainPage = new Glavnaja();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

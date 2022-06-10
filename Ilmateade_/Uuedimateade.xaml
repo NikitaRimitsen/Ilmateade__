@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ilmateade_.Uuedimateade">
-    <StackLayout>
+    <StackLayout BackgroundColor="SteelBlue">
+        <Label HorizontalOptions="Center" FontSize="30" TextColor="White">Ilmateate lisamine</Label>
         <ListView x:Name="peaminebaseList" ItemsSource="{Binding}" ItemSelected="peaminebaseList_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -12,6 +13,7 @@
                                 <Label Text="{Binding Riik}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
                                 <Label Text="{Binding Linn}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
                                 <Label Text="{Binding Temtemperatuur}" FontSize="Medium" HorizontalTextAlignment="End"></Label>
+                               
                             </StackLayout>
                         </ViewCell.View>
                     </ViewCell>
