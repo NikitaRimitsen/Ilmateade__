@@ -3,10 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ilmateade_.Vlaznost">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="SteelBlue">
+            <Label HorizontalOptions="Center" FontSize="30" TextColor="White">Õhuniiskus</Label>
+            <Image x:Name="Kartinka"></Image>
+            <Entry x:Name="entry" Completed="entry_Completed"></Entry>
+            <ListView x:Name="ListView" ItemsSource="{Binding}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Riik}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+                                    <Label Text="{Binding Linn}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+                                    <Label x:Name="Vla" Text="{Binding Niiskus}" FontSize="Medium" HorizontalTextAlignment="End"></Label>
+                                    <!--<Label Text="{Binding Zapomnit}" FontSize="Medium" HorizontalTextAlignment="End"></Label>-->
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

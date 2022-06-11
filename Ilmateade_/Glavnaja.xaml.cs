@@ -51,11 +51,11 @@ namespace Ilmateade_
         {
 
 
-            okmaa = entry.Text;
+            /*okmaa = entry.Text;
             if (okmaa == Riik)
             {
 
-            }
+            }*/
             /*a = 1;
             int c = 0;
             for (int i = 0; i < PeamineBase.Length; i++)
