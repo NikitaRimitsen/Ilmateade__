@@ -7,7 +7,7 @@
             <Label HorizontalOptions="Center" FontSize="30" TextColor="White">Ilmateade</Label>
 
             <Entry x:Name="entry" Completed="Entry_Completed"></Entry>
-            <Image x:Name="Kartinka"></Image>
+            <Image x:Name="Kartinka" WidthRequest="200" HeightRequest="200"></Image>
             <ListView x:Name="ListView" ItemsSource="{Binding}" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

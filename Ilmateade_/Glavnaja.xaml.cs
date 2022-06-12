@@ -60,6 +60,7 @@ namespace Ilmateade_
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            Select 
             Kartinka.Source = ImageSource.FromFile("iconkap.png");
         }
     }
