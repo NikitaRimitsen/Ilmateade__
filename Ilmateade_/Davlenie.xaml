@@ -6,8 +6,7 @@
         <StackLayout BackgroundColor="SteelBlue">
             <Label HorizontalOptions="Center" FontSize="30" TextColor="White">Õhurõhk</Label>
             <Image x:Name="Kartinka"></Image>
-            <Entry x:Name="entry" Completed="entry_Completed"></Entry>
-            <ListView x:Name="ListView" ItemsSource="{Binding}">
+            <ListView x:Name="ListViewi" ItemsSource="{Binding}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

@@ -17,22 +17,6 @@ namespace Ilmateade_
         int a = 1;
         public Glavnaja()
         {
-            /*ListView = new ListView();
-            ListView.ItemsSource = App.Database.GetItems();
-            ListView.ItemTemplate{
-
-            }
-            base.OnAppearing();
-            Label text = new Label
-            {
-                Text = "Ilmateade",
-                HorizontalOptions = LayoutOptions.Center,
-                //VerticalOptions = LayoutOptions.Center,
-                FontSize = 30,
-                TextColor = Color.White
-            };
-            this.Content = new StackLayout { Children = { text,ListView } };
-            this.BackgroundColor = Color.SteelBlue;//LightSteelBlue -- можно исопользовать для светлого оформления*/
             InitializeComponent();
         }
         protected override void OnAppearing()
@@ -72,6 +56,11 @@ namespace Ilmateade_
             {
                 DisplayAlert("Tähelepanu", "Sellist maakonda pole, kontrollige, kas olete Maakonna õigesti kirjutanud", "Hästi");
             }*/
+        }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Kartinka.Source = ImageSource.FromFile("iconkap.png");
         }
     }
 }

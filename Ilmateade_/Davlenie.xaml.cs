@@ -28,14 +28,16 @@ namespace Ilmateade_
             InitializeComponent();
         }
 
-        private void entry_Completed(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-            ListView.ItemsSource = App.Database.GetItems();
-            base.OnAppearing();
-            if ()
+            /*if (Binding.Zapomnit = 1)
             {
-
-            }
+                var apple = from s in base.Table<PeamineBase>()
+                            where s.Symbol.StartsWith("A")
+                            select s;
+            }*/
+            ListViewi.ItemsSource = App.Database.GetItems();
+            base.OnAppearing();
         }
     }
 }
