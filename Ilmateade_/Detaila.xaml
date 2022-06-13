@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ilmateade_.Detaila">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{Binding varvid}">
+            <Image x:Name="Kartinka" WidthRequest="200" HeightRequest="200" Source="{Binding kartinka}"></Image>
+            <Label Text="{Binding Riik, StringFormat='Riik: {0}'}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+            <Label Text="{Binding Linn, StringFormat='Linn: {0}'}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+            <Label Text="{Binding Temtemperatuur, StringFormat='Temtemperatuur: {0} C°'}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+            <Label Text="{Binding Niiskus, StringFormat='Niiskus: {0} %'}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

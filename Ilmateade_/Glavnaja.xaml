@@ -5,18 +5,17 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="SteelBlue">
             <Label HorizontalOptions="Center" FontSize="30" TextColor="White">Ilmateade</Label>
-
             <Entry x:Name="entry" Completed="Entry_Completed"></Entry>
-            <Image x:Name="Kartinka" WidthRequest="200" HeightRequest="200"></Image>
+            
             <ListView x:Name="ListView" ItemsSource="{Binding}" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Riik}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
-                                    <Label Text="{Binding Linn}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
-                                    <Label Text="{Binding Temtemperatuur}" FontSize="Medium" HorizontalTextAlignment="End"></Label>
+                                    <Label Text="{Binding Riik, StringFormat='Riik: {0}'}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+                                    <Label Text="{Binding Linn, StringFormat='Linn: {0}'}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+                                    <Label Text="{Binding Temtemperatuur, StringFormat='{0} C°'}" FontSize="Medium" HorizontalTextAlignment="End"></Label>
                                     <Label Text="{Binding Zapomnit}" FontSize="Medium" HorizontalTextAlignment="End"></Label>
                                 </StackLayout>
                             </ViewCell.View>

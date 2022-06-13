@@ -36,13 +36,13 @@ namespace Ilmateade_
                 ImagePath = "opet.png",
                 TargetPage = typeof(Davlenie)
             });
-            list.Add(new Ilmateadebase()
+            /*list.Add(new Ilmateadebase()
             {
                 Text = "Niiskus",
                 Detail = "Teave niiskuse kohta tänaval",
                 ImagePath = "skills.png",
                 TargetPage = typeof(Vlaznost)
-            });
+            });*/
             list.Add(new Ilmateadebase()
             {
                 Text = "Tuule suund",

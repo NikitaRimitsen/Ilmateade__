@@ -19,6 +19,44 @@ namespace Ilmateade_
         //public string tuulekiirus { get; set; }
         public int zapomnit { get; set; }
 
+        [Ignore]
+        public string kartinka
+        {
+            get
+            {
+                if (Niiskus < 25)
+                {
+                    return "solnce.png";
+                }
+                else if (Niiskus < 50)
+                {
+                    return "solnceizobl.png";
+                }
+                else
+                {
+                    return "dozd.png";
+                }
+            }
+        }
 
+        [Ignore]
+        public string varvid
+        {
+            get
+            {
+                if (Niiskus < 25)
+                {
+                    return "LightSteelBlue";
+                }
+                else if (Niiskus < 50)
+                {
+                    return "RoyalBlue";
+                }
+                else
+                {
+                    return "MediumBlue";
+                }
+            }
+        }
     }
 }

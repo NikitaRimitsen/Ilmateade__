@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Ilmateade_
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Glavnaja : ContentPage
     {
+        SQLiteConnection database;
+
         string okmaa = "";
         int j;
         int a = 1;
@@ -34,34 +37,17 @@ namespace Ilmateade_
         private void Entry_Completed(object sender, EventArgs e)
         {
 
-
-            /*okmaa = entry.Text;
-            if (okmaa == Riik)
-            {
-
-            }*/
-            /*a = 1;
-            int c = 0;
-            for (int i = 0; i < PeamineBase.Length; i++)
-            {
-                for (j = 0; j < votetonado.Length; j++)
-                {
-                    if (okmaa =  Binding.Riik)
-                    {
-
-                    }
-                }
-            }
-            if (okmaa == "")
-            {
-                DisplayAlert("Tähelepanu", "Sellist maakonda pole, kontrollige, kas olete Maakonna õigesti kirjutanud", "Hästi");
-            }*/
         }
 
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Select 
-            Kartinka.Source = ImageSource.FromFile("iconkap.png");
+            PeamineBase peamineBase = (PeamineBase)((ListView)sender).SelectedItem;
+            await Navigation.PushAsync(new Detaila(peamineBase));
+        }
+
+        public IEnumerable<PeamineBase> Riik()
+        {
+            return database.Table<PeamineBase>().ToList();
         }
     }
 }
