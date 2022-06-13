@@ -5,8 +5,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="SteelBlue">
             <Label HorizontalOptions="Center" FontSize="30" TextColor="White">Ilmateade</Label>
-            <Entry x:Name="entry" Completed="Entry_Completed"></Entry>
-            
+            <Label></Label>
             <ListView x:Name="ListView" ItemsSource="{Binding}" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

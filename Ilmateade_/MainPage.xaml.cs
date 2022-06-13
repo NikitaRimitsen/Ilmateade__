@@ -26,14 +26,14 @@ namespace Ilmateade_
             {
                 Text = "Peamine",
                 Detail = "Teave ilmateate kohta",
-                ImagePath = "about.png",
+                ImagePath = "naglav.png",
                 TargetPage = typeof(Glavnaja)
             });
             list.Add(new Ilmateadebase()
             {
                 Text = "Õhurõhk",
                 Detail = "Teave tänava rõhu kohta",
-                ImagePath = "opet.png",
+                ImagePath = "davpogod.png",
                 TargetPage = typeof(Davlenie)
             });
             /*list.Add(new Ilmateadebase()
@@ -47,15 +47,22 @@ namespace Ilmateade_
             {
                 Text = "Tuule suund",
                 Detail = "Uurige tuule suunda",
-                ImagePath = "aci2.png",
+                ImagePath = "veter.png",
                 TargetPage = typeof(Napravlenievetra)
             });
             list.Add(new Ilmateadebase()
             {
                 Text = "Ilmade lisamine",
                 Detail = "Uurige tuule suunda",
-                ImagePath = "aci2.png",
+                ImagePath = "dobpogoda.png",
                 TargetPage = typeof(Uuedimateade)
+            });
+            list.Add(new Ilmateadebase()
+            {
+                Text = "Rakenduse kohta",
+                Detail = "Väike teave rakenduse kohta",
+                ImagePath = "nastroika.png",
+                TargetPage = typeof(Doing)
             });
             return list;
         }

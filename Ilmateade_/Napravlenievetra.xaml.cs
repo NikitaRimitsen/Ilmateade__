@@ -14,7 +14,7 @@ namespace Ilmateade_
     {
         public Napravlenievetra()
         {
-            Label text = new Label
+            /*Label text = new Label
             {
                 Text = "Tuule suund",
                 HorizontalOptions = LayoutOptions.Center,
@@ -23,7 +23,13 @@ namespace Ilmateade_
                 TextColor = Color.White
             };
             this.Content = new StackLayout { Children = { text } };
-            this.BackgroundColor = Color.SteelBlue;//LightSteelBlue -- можно исопользовать для светлого оформления
+            this.BackgroundColor = Color.SteelBlue;//LightSteelBlue -- можно исопользовать для светлого оформления*/
+            InitializeComponent();
+        }
+        protected override void OnAppearing()
+        {
+            ListViewa.ItemsSource = App.Database.GetItems();
+            base.OnAppearing();
         }
     }
 }

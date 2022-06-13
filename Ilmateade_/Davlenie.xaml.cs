@@ -30,12 +30,6 @@ namespace Ilmateade_
 
         protected override void OnAppearing()
         {
-            /*if (Binding.Zapomnit = 1)
-            {
-                var apple = from s in base.Table<PeamineBase>()
-                            where s.Symbol.StartsWith("A")
-                            select s;
-            }*/
             ListViewi.ItemsSource = App.Database.GetItems();
             base.OnAppearing();
         }

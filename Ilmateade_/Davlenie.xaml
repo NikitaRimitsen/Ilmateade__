@@ -1,21 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ilmateade_.Davlenie">
+             x:Class="Ilmateade_.Davlenie"
+             Title="Õhurõhk">
     <ContentPage.Content>
         <StackLayout BackgroundColor="SteelBlue">
             <Label HorizontalOptions="Center" FontSize="30" TextColor="White">Õhurõhk</Label>
-            <Image x:Name="Kartinka"></Image>
             <ListView x:Name="ListViewi" ItemsSource="{Binding}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Riik}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
-                                    <Label Text="{Binding Linn}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
-                                    <Label Text="{Binding Surve}" FontSize="Medium" HorizontalTextAlignment="End"></Label>
-                                    <Label Text="{Binding Zapomnit}" FontSize="Medium" HorizontalTextAlignment="End"></Label>
+                                    <Label Text="{Binding Riik, StringFormat='Riik: {0}'}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+                                    <Label Text="{Binding Linn, StringFormat='Liin: {0}'}" FontSize="Medium" HorizontalTextAlignment="Start"></Label>
+                                    <Label Text="{Binding Surve, StringFormat='Surve: {0}'}" FontSize="Medium" HorizontalTextAlignment="End"></Label>
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>

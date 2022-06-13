@@ -3,22 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ilmateade_.DBPeaminePage">
     <StackLayout>
-        <Label Text="Riik" />
+        <Label Text="Riik:" />
         <Entry Text="{Binding Riik}" />
-        <Label Text="Linn" />
+        <Label Text="Linn:" />
         <Entry Text="{Binding Linn}" />
-        <Label Text="Temtemperatuur" />
-        <Entry Text="{Binding Temtemperatuur}" />
-        <Label Text="Surve" />
-        <Entry Text="{Binding Surve}" />
-        <Label Text="Niiskus" />
-        <Entry Text="{Binding Niiskus}" />
+        <Label Text="Temtemperatuur:" />
+        <Entry Keyboard="Telephone" Text="{Binding Temtemperatuur}" />
+        <Label Text="Surve:" />
+        <Entry Keyboard="Numeric" Text="{Binding Surve}" />
+        <Label Text="Niiskus:" />
+        <Entry Keyboard="Numeric" Text="{Binding Niiskus}" />
         <!--<Label Text="tuulekiirus" />
         <Entry Text="{Binding tuulekiirus}" />-->
-        <Label Text="tuulekiirus" />
-        <Entry Text="{Binding tuulekiirus}" />
-        <Label Text="Zapomnit" />
-        <Entry Text="{Binding zapomnit}" />
+        <Label Text="Tuule suund:" />
+        <Entry Keyboard="Chat" Text="{Binding Tuule_suund}" />
+        <!--<Label Text="Zapomnit" />
+        <Entry Text="{Binding zapomnit}" />-->
         <StackLayout Orientation="Horizontal">
             <Button Text="Salvestama" Clicked="Button_Clicked" />
             <Button Text="Eemaldama" Clicked="Button_Clicked_1" />
